@@ -1,6 +1,5 @@
 function whereAreYou(collection, source) {
   var srcKeys = Object.keys(source);
-
   // filter the collection
   return collection.filter(function (obj) {
     // return a Boolean value for `filter` method
@@ -10,4 +9,3 @@ function whereAreYou(collection, source) {
     });
   });
 }
-
