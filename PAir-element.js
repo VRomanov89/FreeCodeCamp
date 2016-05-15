@@ -1,26 +1,25 @@
 function pairElement(str) {
-  var strArr = str.split('');
-  var newArr = [];
-  for(var i = 0; i < strArr.length; i++){
-    var someArr = [];
-    someArr.push(strArr[i]);
-    switch(strArr[i]) {
-      case "C":
-        someArr.push("G");
-        break;
-      case "G":
-        someArr.push("C");
+  var arr = [];
+  for(var i = 0; i < str.length; i++){
+    var character = str.charAt(i);
+    switch (character) {
+      case "A":
+        arr.push(["A","T"]);
         break;
       case "T":
-        someArr.push("A");
+        arr.push(["T","A"]);
         break;
-      case "A":
-        someArr.push("T");
+      case "C":
+        arr.push(["C","G"]);
+        break;
+      case "G":
+        arr.push(["G","C"]);
         break;
       default:
         break;
     }
-    newArr.push(someArr);
   }
-  return newArr;
+  
+  //arr = str.split('');
+  return arr;
 }
